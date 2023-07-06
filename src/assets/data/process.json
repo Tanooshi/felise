@@ -1,0 +1,20 @@
+[
+    {
+        "id": 1,
+        "title": "Choose Your Home.",
+        "subtitle": "Explore our wide selection of carefully curated homes to find the perfect fit for your lifestyle and preferences",
+        "img":"img-two-person-choosing-home.png"
+    },
+    {
+        "id": 2,
+        "title": "Schedule a Tour.",
+        "subtitle": "Arrange a convenient time to visit your desired home and experience it firsthand.",
+        "img":"img-scheduling-tour.png"
+    },
+    {
+        "id": 3,
+        "title": "Pay and Start Living",
+        "subtitle": "Complete the payment and get ready to embark on a new chapter of comfortable and enjoyable living.",
+        "img":"img-start-living.png"
+    }
+]

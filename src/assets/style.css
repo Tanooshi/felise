@@ -1,0 +1,456 @@
+/* ./src/index.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
+@layer base {
+    @font-face {
+        font-family: "Editorial old italic";
+        src: url(../assets/fonts/ppeditorialold-italic.otf) format(opentype);
+    }
+    @font-face {
+        font-family: "Editorial old";
+        src: url(../assets/fonts/ppeditorialold-regular.otf) format(opentype);
+    }
+    @font-face {
+        font-family: "Power Grotesk";
+        src: url(../assets/fonts/PowerGrotesk-Black.ttf) format(truetype);
+    }
+    html {
+        @apply scroll-smooth;
+    }
+    body {
+        @apply font-sans;
+    }
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        @apply font-serif;
+    }
+    li {
+        list-style: none;
+    }
+    a {
+        text-decoration: none;
+    }
+}
+@layer components {
+    .hero-section {
+        @apply bg-lavander text-dark-lavander;
+    }
+    .hero-content {
+        @apply h-screen flex items-center px-10 sticky top-0;
+    }
+    .hero-section .heading {
+        @apply text-5xl mb-10 md:text-8xl lg:text-6xl lg:w-8/12 lg:mx-auto lg:mb-5 xl:text-[5rem] 2xl:text-8xl 2xl:mb-10;
+    }
+    .hero-content .subheading {
+        @apply text-sm mb-14 md:text-xl md:px-20 md:mb-20 lg:text-base lg:w-8/12 lg:mx-auto lg:mb-10 xl:w-1/2 2xl:text-xl 2xl:mb-16;
+    }
+    .primary-btn {
+        @apply bg-dark-green text-white font-serif px-16 py-6 rounded-lg tracking-wide text-xl md:px-20 md:py-8 md:text-2xl lg:px-16 lg:py-5 lg:text-base 2xl:text-2xl 2xl:py-7 2xl:px-20;
+    }
+    .hero-section .img-house {
+        @apply h-screen relative z-20;
+        background: url("../assets/img/2.2About/img-house-green-grass.png") no-repeat;
+        background-position: 20% bottom;
+        background-size: 300%;
+    }
+    .navbar {
+        @apply px-10 pt-10  flex justify-between items-center lg:w-10/12 lg:mx-auto sticky top-0 z-20;
+    }
+
+    .hamburger {
+        @apply block cursor-pointer transition duration-300 lg:hidden;
+    }
+
+    .bar {
+        @apply block w-[25px] h-[2px] my-1 mx-auto bg-black;
+    }
+    .nav-menu {
+        position: fixed;
+        right: -100%;
+        top: 5rem;
+        flex-direction: column;
+        width: 100%;
+        padding: 20px;
+        transition: 0.3s;
+        height: 90vh;
+    }
+    .nav-menu {
+        @apply space-y-10 py-10 md:px-0 bg-dark-lavander lg:bg-lavander;
+    }
+
+    .nav-menu.active {
+        right: 0;
+    }
+    .nav-menu .nav-link {
+        @apply text-5xl px-5 lg:px-3 font-serif text-black;
+    }
+    .nav-menu.active .nav-link {
+        @apply text-lavander;
+    }
+    .hamburger.active .bar1 {
+        -webkit-transform: rotate(-45deg) translate(-5px, 5px);
+        transform: rotate(-45deg) translate(-5px, 5px);
+        transition: 0.4s;
+    }
+
+    .hamburger.active .bar2 {
+        opacity: 0;
+        transition: 0.4s;
+    }
+
+    .hamburger.active .bar3 {
+        -webkit-transform: rotate(45deg) translate(-3px, -3px);
+        transform: rotate(45deg) translate(-3px, -3px);
+        transition: 0.4s;
+    }
+    .navbar .brand-name {
+        @apply font-serif-italic text-black text-2xl;
+    }
+    .socials-section {
+        @apply bg-black relative z-30 text-white overflow-x-hidden;
+    }
+    .socials-section .title {
+        @apply text-center p-10 text-2xl md:p-16 md:text-3xl md:w-10/12 md:mx-auto;
+    }
+    .socials-section .social img {
+        @apply h-[40px] md:h-[60px];
+    }
+    .social-logo {
+        @apply py-10;
+    }
+    .social-text {
+        @apply p-10 pt-20 lg:flex lg:justify-between lg:items-baseline lg:px-20 2xl:px-32;
+    }
+    .social-text .heading {
+        @apply md:text-7xl lg:text-5xl lg:m-0 lg:pr-20 xl:text-6xl 2xl:text-7xl;
+    }
+    .social-text .subheading {
+        @apply md:w-8/12 md:ml-auto lg:w-1/4 lg:text-xs xl:text-sm 2xl:text-base;
+    }
+    .social-cards {
+        @apply p-3 md:p-10 space-y-5 lg:px-20 lg:grid lg:grid-cols-4 lg:space-y-0 lg:gap-10 2xl:px-32;
+    }
+    .social-cards .card {
+        @apply h-[450px]  rounded-lg overflow-hidden relative
+        md:h-[550px] lg:h-[300px] xl:h-[450px] 2xl:h-[550px];
+    }
+    .social-cards .card img {
+        @apply object-cover h-full w-full object-center;
+    }
+    .social-cards .card:hover img {
+        @apply scale-125 transition-all duration-300 ease-in-out;
+    }
+    .social-cards .card .card-overlay {
+        @apply absolute h-full w-full top-0 flex flex-col justify-end items-center space-y-2 p-5 pb-7;
+        background: linear-gradient(
+            180deg,
+            rgba(255, 255, 255, 0) 45%,
+            rgba(161, 169, 170, 0.3083123198847262) 70%,
+            rgba(1, 23, 24, 1) 100%
+        );
+        @apply md:flex-row md:justify-between md:items-end;
+    }
+    .card-overlay .card-text {
+        @apply md:w-1/2 lg:w-10/12;
+    }
+    .card-overlay .title {
+        @apply p-0 md:text-left md:m-0 lg:text-xl 2xl:text-3xl;
+    }
+    .card-overlay .subtitle {
+        @apply text-xs md:text-sm lg:text-xs 2xl:text-base;
+    }
+    .card-overlay .primary-btn {
+        @apply w-full text-sm py-5 md:w-fit md:px-10 lg:text-[0.7rem] lg:px-5 lg:py-3 lg:w-4/12 2xl:text-xl;
+    }
+    .testimonial-section {
+        @apply px-5 py-10 bg-black text-white md:px-10 lg:p-20 2xl:p-32;
+    }
+
+    .testimonial-section .quote-mark svg {
+        @apply h-[40px] w-[40px] my-5 2xl:h-[50px] 2xl:w-[50px];
+    }
+    .testimonial .testimonial-text {
+        @apply font-serif text-2xl text-lavander md:text-[2.15rem] md:leading-10 xl:text-5xl xl:leading-tight 2xl:text-[3.5rem];
+    }
+    .testimonial-container .testimonial-author {
+        @apply my-10 flex space-x-5 lg:justify-end lg:pr-10 xl:space-x-8;
+    }
+    .testimonial-author img {
+        @apply h-[40px] rounded-full xl:h-[50px] 2xl:h-[60px];
+    }
+    .testimonial-author .position {
+        @apply text-xs 2xl:text-base;
+    }
+    .testimonial-author .author {
+        @apply xl:text-2xl 2xl:text-3xl;
+    }
+    .testimonial-img {
+        @apply overflow-hidden rounded-xl;
+    }
+    .testimonial-img img {
+        @apply object-cover w-full h-full;
+    }
+    .testimonial {
+        @apply lg:w-8/12;
+    }
+    .process-section {
+        @apply bg-black pb-10 lg:py-20;
+    }
+    .process-section .heading {
+        @apply text-white text-center text-4xl p-10 md:text-7xl md:px-20 lg:px-40 xl:text-8xl 2xl:text-9xl;
+    }
+
+    .process-slide {
+        @apply bg-white rounded-lg py-5 px-2 pt-20 text-center space-y-3 h-[650px] flex flex-col justify-between md:rounded-2xl md:flex-row md:p-10 md:space-y-0 md:text-left md:space-x-5 lg:h-[500px] 2xl:h-[650px];
+    }
+    .process-slide .text-container {
+        @apply space-y-3 mb-5 md:w-2/5 md:h-full md:flex md:flex-col md:justify-between xl:w-1/3;
+    }
+    .process-slide .number {
+        @apply text-5xl font-serif md:text-7xl md:mb-10 md:mt-5 lg:text-5xl 2xl:text-7xl;
+    }
+    .process-slide .title {
+        @apply text-3xl md:text-5xl lg:text-4xl xl:text-5xl 2xl:text-7xl;
+    }
+    .process-slide .subtitle {
+        @apply text-sm px-10 md:px-0 lg:text-xs 2xl:text-lg;
+    }
+    .process-slide .image {
+        @apply h-full overflow-hidden rounded-2xl md:w-3/5 xl:w-2/3;
+    }
+    .process-slide .image img {
+        @apply object-cover h-full w-full;
+    }
+    .properties-section {
+        @apply py-10 px-3 md:px-10 md:py-20;
+    }
+    .properties-section .heading {
+        @apply text-[2.75rem] leading-tight px-5 md:px-0 md:text-6xl xl:text-7xl 2xl:text-8xl;
+    }
+    .properties-cards {
+        @apply space-y-5 my-5 lg:grid lg:grid-cols-3 lg:space-y-0 lg:gap-5;
+    }
+    .properties-cards .card {
+        @apply rounded-xl overflow-hidden;
+    }
+    .properties-cards .card .image {
+        @apply h-[450px] overflow-hidden lg:h-[300px] xl:h-[400px];
+    }
+    .properties-cards .card img {
+        @apply object-cover h-full w-full;
+    }
+    .properties-cards .card .card-footer {
+        @apply bg-lavander text-center p-3 space-y-3;
+    }
+    .card-footer .price {
+        @apply 2xl:text-xl;
+    }
+    .card-footer .title {
+        @apply text-2xl lg:text-xl 2xl:text-2xl;
+    }
+    .card-footer .primary-btn {
+        @apply w-full py-3;
+    }
+    .view-more-btn {
+        @apply font-serif text-center cursor-pointer w-full py-5 md:text-xl;
+    }
+    .waitlist-section {
+        @apply bg-lavander py-16 lg:flex 2xl:px-10;
+    }
+    .waitlist-section .text-container {
+        @apply px-10 text-center md:text-left lg:flex lg:flex-col lg:justify-between;
+    }
+    .waitlist-section .text-container .heading {
+        @apply text-5xl md:text-7xl lg:text-6xl lg:mt-5 2xl:text-7xl;
+    }
+    .waitlist-section .about-numbers {
+        @apply py-10 space-y-10 w-1/2 mx-auto font-serif md:w-full md:grid  md:grid-cols-3 md:space-y-0 md:gap-24 lg:gap-10;
+    }
+    .about-numbers .count {
+        @apply text-6xl  text-dark-lavander 2xl:text-7xl;
+    }
+    .about-numbers .label {
+        @apply lg:text-sm 2xl:text-base;
+    }
+    .waitlist-section .waitlist-img {
+        @apply mt-10 mx-3 rounded-xl overflow-hidden h-[400px] md:mx-10 lg:w-full lg:h-[550px] lg:my-0;
+    }
+    .waitlist-section .waitlist-img img {
+        @apply object-cover h-full w-full;
+    }
+    .waitlist-section .primary-btn {
+        @apply md:w-fit md:px-16 md:py-5;
+    }
+    .footer-section {
+        @apply text-center bg-[#1E1E1E] text-white overflow-x-hidden;
+    }
+    .footer-section .brand-name {
+        @apply font-serif-italic text-[13rem] text-lavander md:text-9xl md:py-10 md:pt-20;
+    }
+    .newsletter {
+        @apply px-10 md:w-2/3 md:mx-auto md:pb-10 lg:w-1/2;
+    }
+    .newsletter .subheading {
+        @apply text-sm lg:px-10 lg:text-xs xl:px-20 2xl:text-base;
+    }
+    .newsletter-form {
+        @apply my-10  font-serif text-sm flex md:px-10 md:mb-5 xl:px-20 2xl:text-xl;
+    }
+    .newsletter-form .input-text {
+        @apply p-5 w-full 2xl:px-10 text-black;
+    }
+    .newsletter-form .submit-btn {
+        @apply py-5 bg-lavander w-20 2xl:w-32 text-black;
+    }
+    .splide-email {
+        @apply text-7xl md:text-8xl 2xl:text-9xl;
+    }
+    .watermark {
+        @apply py-10 2xl:text-xl;
+    }
+}
+@media (min-width: 768px) {
+    .hero-section .img-house {
+        background-size: 180%;
+    }
+}
+@media (min-width: 1024px) {
+    .hero-section .img-house {
+        background-size: contain;
+    }
+    .nav-menu {
+        position: static;
+        display: flex;
+        height: auto;
+        justify-content: flex-end;
+        flex-direction: row;
+        align-items: center;
+    }
+    .nav-menu {
+        @apply space-y-0 py-0 space-x-3 ml-auto;
+    }
+    .nav-menu .nav-link {
+        @apply text-xs xl:text-lg;
+    }
+}
+
+@media (min-width: 1920px) {
+    .navbar .brand-name {
+        @apply text-5xl;
+    }
+    .nav-menu .nav-link {
+        @apply text-2xl;
+    }
+    .social-text {
+        @apply px-40 py-40;
+    }
+    .social-text .heading {
+        @apply text-8xl;
+    }
+    .social-text .subheading {
+        @apply text-lg;
+    }
+    .social-cards {
+        @apply px-40 gap-16;
+    }
+    .social-cards .card {
+        @apply h-[650px];
+    }
+    .card-overlay .title {
+        @apply text-4xl;
+    }
+    .card-overlay .subtitle {
+        @apply text-lg;
+    }
+    .card-overlay .primary-btn {
+        @apply text-xl px-10 py-5;
+    }
+    .testimonial-section {
+        @apply p-40;
+    }
+    .testimonial .testimonial-text {
+        @apply text-7xl leading-tight;
+    }
+    .testimonial-author .author {
+        @apply text-4xl;
+    }
+    .testimonial-section .quote-mark svg {
+        @apply h-[70px] w-[70px];
+    }
+    .testimonial-author .position {
+        @apply text-xl;
+    }
+    .testimonial-author img {
+        @apply h-[70px];
+    }
+    .process-slide {
+        @apply h-[900px] p-16;
+    }
+    .process-section .heading {
+        @apply text-[10rem];
+    }
+    .process-slide .number {
+        @apply text-9xl;
+    }
+    .process-slide .title {
+        @apply text-8xl;
+    }
+    .process-slide .subtitle {
+        @apply text-2xl;
+    }
+    .properties-section .heading {
+        @apply text-9xl;
+    }
+    .properties-cards {
+        @apply gap-10;
+    }
+    .properties-cards .card .image {
+        @apply h-[600px];
+    }
+    .properties-cards .card .card-footer {
+        @apply p-5;
+    }
+    .card-footer .price {
+        @apply text-2xl;
+    }
+    .card-footer .title {
+        @apply text-3xl;
+    }
+    .view-more-btn {
+        @apply text-3xl;
+    }
+    .waitlist-section .waitlist-img {
+        @apply w-1/2;
+    }
+    .waitlist-section .text-container .heading {
+        @apply text-[7rem];
+    }
+    .waitlist-section .about-numbers {
+        @apply gap-48;
+    }
+    .about-numbers .count {
+        @apply text-9xl;
+    }
+    .about-numbers .label {
+        @apply text-2xl;
+    }
+    .waitlist-section .waitlist-img {
+        @apply h-[700px];
+    }
+    .footer-section .brand-name {
+        @apply text-[11rem] py-20 pt-40;
+    }
+    .newsletter {
+        @apply w-5/12;
+    }
+    .newsletter .subheading {
+        @apply text-xl;
+    }
+}

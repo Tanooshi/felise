@@ -1,0 +1,33 @@
+[
+    {
+        "name": "77B Harborview Condos",
+        "price": "$525,000",
+        "img": "img-harborview-condos.png"
+    },
+    {
+        "name": "2934 Willowbrook Gardens",
+        "price": "$4,500,000",
+        "img": "img-willowbrook-gardens.png"
+    },
+    {
+        "name": "33 The Cozy Corner",
+        "price": "$475.000",
+        "img":"img-the-cozy-corner.png"
+    },
+    {
+        "name": "63A Parkside Residences",
+        "price": "$650,000",
+        "img":"img-parkside-residences.png"
+    },
+    {
+        "name": "Lot 52C Golden Gate Residences",
+        "price": "$425,000",
+        "img":"img-golden-gate-residences.png"
+    },
+    {
+        "name": "Lot 56 Tranquil Oaks",
+        "price": "$375,000",
+        "img":"img-tranquil-oats.png"
+    }
+
+]
