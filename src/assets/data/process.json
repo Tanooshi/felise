@@ -3,18 +3,18 @@
         "id": 1,
         "title": "Choose Your Home.",
         "subtitle": "Explore our wide selection of carefully curated homes to find the perfect fit for your lifestyle and preferences",
-        "img":"img-two-person-choosing-home.png"
+        "img":"https://ik.imagekit.io/o3zau3i2w/felise/process/img-two-person-choosing-home.webp?updatedAt=1688878827018"
     },
     {
         "id": 2,
         "title": "Schedule a Tour.",
         "subtitle": "Arrange a convenient time to visit your desired home and experience it firsthand.",
-        "img":"img-scheduling-tour.png"
+        "img":"https://ik.imagekit.io/o3zau3i2w/felise/process/img-scheduling-tour.webp?updatedAt=1688878827235"
     },
     {
         "id": 3,
         "title": "Pay and Start Living",
         "subtitle": "Complete the payment and get ready to embark on a new chapter of comfortable and enjoyable living.",
-        "img":"img-start-living.png"
+        "img":"https://ik.imagekit.io/o3zau3i2w/felise/process/img-start-living.webp?updatedAt=1688878827172"
     }
 ]

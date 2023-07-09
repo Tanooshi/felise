@@ -23,7 +23,8 @@
             <div class="primary-btn">Join Waitlist</div>
         </div>
         <div class="waitlist-img">
-            <img src="../assets/img/6Email/img-group-meeting.png" alt="">
+            <img src="https://ik.imagekit.io/o3zau3i2w/felise/email/img-group-meeting.webp?updatedAt=1688878826771"
+                alt="Join Our Growing family who loves felise">
         </div>
 
     </div>
@@ -56,46 +57,46 @@ export default {
 
         },
         setCount1() {
-            if (this.i <= 50) {
-                if (this.i < 50) {
-                    setTimeout(() => {
-                        this.i++
-                        this.num1 = this.i + 'k'
-                        this.setCount1()
-                    }, 25)
-                } else {
-                    this.num1 = '4M'
-                }
+
+            if (this.i < 50) {
+                setTimeout(() => {
+                    this.i++
+                    this.num1 = this.i + 'k'
+                    this.setCount1()
+                }, 25)
+            } else {
+                this.num1 = '4M'
             }
+
         },
         setCount2() {
 
 
-            if (this.j <= 50) {
-                if (this.j < 50) {
-                    setTimeout(() => {
-                        this.j++
-                        this.num2 = this.j + 'M'
-                        this.setCount2()
-                    }, 25)
-                } else {
-                    this.num2 = '30B'
-                }
+
+            if (this.j < 30) {
+                setTimeout(() => {
+                    this.j++
+                    this.num2 = this.j + 'M'
+                    this.setCount2()
+                }, 50)
+            } else {
+                this.num2 = '30B'
             }
+
 
         },
         setCount3() {
-            if (this.j <= 50) {
-                if (this.j < 50) {
-                    setTimeout(() => {
-                        this.j++
-                        this.num3 = this.j + '%'
-                        this.setCount3()
-                    }, 60)
-                } else {
-                    this.num3 = '95%'
-                }
+
+            if (this.j < 95) {
+                setTimeout(() => {
+                    this.j++
+                    this.num3 = this.j + '%'
+                    this.setCount3()
+                }, 15)
+            } else {
+                this.num3 = '95%'
             }
+
         },
         reset() {
             this.num1 = 0;

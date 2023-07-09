@@ -7,7 +7,7 @@
                     <SplideTrack>
                         <SplideSlide v-for="social in socials" :key="social">
                             <div class="social ">
-                                <img :src="require(`../assets/img/2.1Socials/${social.img}`)" :alt="social.name">
+                                <img :src="social.img" :alt="social.name">
                             </div>
 
                         </SplideSlide>
@@ -22,7 +22,8 @@
         </div>
         <div class="social-cards">
             <div class="card lg:col-span-2">
-                <img src="../assets/img/2.2About/img-gomez-condo.png" alt="Gomez condo">
+                <img src="https://ik.imagekit.io/o3zau3i2w/felise/about/img-gomez-condo.webp?updatedAt=1688878833444"
+                    alt="Gomez condo">
                 <div class="card-overlay">
                     <div class="card-text">
                         <h3 class="title">Gomez Condo</h3>
@@ -34,7 +35,8 @@
 
             </div>
             <div class="card">
-                <img src="../assets/img/2.2About/img-fornaleza-dining-view.png" alt="Fornaleza's">
+                <img src="https://ik.imagekit.io/o3zau3i2w/felise/about/img-fornaleza-dining-view.webp?updatedAt=1688878830665"
+                    alt="Fornaleza's">
                 <div class="card-overlay">
                     <div class="card-text">
                         <h3 class="title">Fornaleza’s</h3>
@@ -46,7 +48,8 @@
 
             </div>
             <div class="card">
-                <img src="../assets/img/2.2About/img-maybeln-bluehouse.png" alt="Gomez condo">
+                <img src="https://ik.imagekit.io/o3zau3i2w/felise/about/img-maybeln-bluehouse.webp?updatedAt=1688878833611"
+                    alt="Gomez condo">
                 <div class="card-overlay">
                     <div class="card-text">
                         <h3 class="title">Maybeln</h3>

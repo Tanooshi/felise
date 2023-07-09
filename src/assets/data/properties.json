@@ -2,32 +2,32 @@
     {
         "name": "77B Harborview Condos",
         "price": "$525,000",
-        "img": "img-harborview-condos.png"
+        "img": "https://ik.imagekit.io/o3zau3i2w/felise/properties/img-harborview-condos.webp?updatedAt=1688878827282"
     },
     {
         "name": "2934 Willowbrook Gardens",
         "price": "$4,500,000",
-        "img": "img-willowbrook-gardens.png"
+        "img": "https://ik.imagekit.io/o3zau3i2w/felise/properties/img-willowbrook-gardens.webp?updatedAt=1688878826788"
     },
     {
         "name": "33 The Cozy Corner",
         "price": "$475.000",
-        "img":"img-the-cozy-corner.png"
+        "img":"https://ik.imagekit.io/o3zau3i2w/felise/properties/img-the-cozy-corner.webp?updatedAt=1688878827104"
     },
     {
         "name": "63A Parkside Residences",
         "price": "$650,000",
-        "img":"img-parkside-residences.png"
+        "img":"https://ik.imagekit.io/o3zau3i2w/felise/properties/img-parkside-residences.webp?updatedAt=1688878827126"
     },
     {
         "name": "Lot 52C Golden Gate Residences",
         "price": "$425,000",
-        "img":"img-golden-gate-residences.png"
+        "img":"https://ik.imagekit.io/o3zau3i2w/felise/properties/img-golden-gate-residences.webp?updatedAt=1688878827195"
     },
     {
         "name": "Lot 56 Tranquil Oaks",
         "price": "$375,000",
-        "img":"img-tranquil-oats.png"
+        "img":"https://ik.imagekit.io/o3zau3i2w/felise/properties/img-tranquil-oats.webp?updatedAt=1688878827184"
     }
 
 ]

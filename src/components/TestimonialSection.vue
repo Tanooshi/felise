@@ -16,9 +16,10 @@
 
             </div>
             <div class="testimonial-author">
-                <img src="../assets/img/3Testimonial/img-mill-albert.png" alt="">
+                <img src="https://ik.imagekit.io/o3zau3i2w/felise/testimonials/img-mill-albert.webp?updatedAt=1688878830245"
+                    alt="Mill Albert">
                 <div>
-                    <h6 class="author">Mill Albert</h6>
+                    <h5 class="author">Mill Albert</h5>
                     <p class="position">CTO, Microsoft</p>
                 </div>
 
@@ -27,7 +28,7 @@
 
         </div>
         <div class="testimonial-img">
-            <img src="../assets/img/3Testimonial/img-elegant-kitchen-area.png" alt="">
+            <img src="../assets/img/3Testimonial/img-elegant-kitchen-area.webp" alt="Elegant Kitchen Area">
         </div>
     </div>
 </template>

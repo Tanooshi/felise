@@ -5,7 +5,7 @@
 
             <div class="card" v-for="property in properties.slice(0, 3)" :key="property">
                 <div class="image">
-                    <img :src="require(`../assets/img/5Properties/${property.img}`)" alt="">
+                    <img :src="property.img" :alt="property.name">
                 </div>
 
                 <div class="card-footer">
@@ -20,7 +20,7 @@
 
             <div class="card" v-for="property in properties" :key="property">
                 <div class="image">
-                    <img :src="require(`../assets/img/5Properties/${property.img}`)" alt="">
+                    <img :src="property.img" :alt="property.name">
                 </div>
 
                 <div class="card-footer">

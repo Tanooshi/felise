@@ -3,6 +3,15 @@
         <h2 class="heading">Simply find your home with felise.</h2>
         <div class="process-splide">
             <Splide :options="options" :has-track="false">
+                <div class="splide__arrows">
+                    <button class="splide__arrow splide__arrow--prev">
+                        Prev
+                    </button>
+                    <button class="splide__arrow splide__arrow--next  bg-primary-orange">
+                        <img src="../assets/img/4Process/arrow.png" alt="Arrow next">
+
+                    </button>
+                </div>
                 <SplideTrack>
                     <SplideSlide v-for="process in processes" :key="process.id">
                         <div class="process-slide">
@@ -15,7 +24,7 @@
                                 <p class="subtitle">{{ process.subtitle }}</p>
                             </div>
                             <div class="image">
-                                <img :src="require(`../assets/img/4Process/${process.img}`)" alt="">
+                                <img :src="process.img" :alt="process.img">
                             </div>
 
 
@@ -42,9 +51,10 @@ export default {
             type: 'loop',
             gap: '1rem',
             autoPlay: true,
-            arrows: false,
+            arrows: true,
             pagination: false,
             perPage: 1,
+            perMove: 1,
 
             mediaQuery: 'min',
             breakpoints: {
