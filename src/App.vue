@@ -2,7 +2,7 @@
   <div>
     <HeroSection />
     <TestimonialSection id="testimonials" />
-    <ProcessSection />
+    <ProcessSection id="process" />
     <PropertiesSection id="properties" />
     <WaitlistSection />
     <FooterSection id="contact" />

@@ -48,7 +48,7 @@ export default {
     },
     setup() {
         const options = {
-            type: 'loop',
+
             gap: '1rem',
             autoPlay: true,
             arrows: true,

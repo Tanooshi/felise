@@ -20,7 +20,10 @@
                 </div>
 
             </div>
-            <div class="primary-btn">Join Waitlist</div>
+            <a href="/felise/#contact">
+                <button class="primary-btn">Join Waitlist</button>
+            </a>
+
         </div>
         <div class="waitlist-img">
             <img src="https://ik.imagekit.io/o3zau3i2w/felise/email/img-group-meeting.webp?updatedAt=1688878826771"

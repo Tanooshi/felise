@@ -9,7 +9,8 @@
                     Embrace the Next Chapter
                     of Their Lives
                 </p>
-                <button class="primary-btn">Get Started</button>
+                <a href="/felise/#process"><button class="primary-btn">Get Started</button></a>
+
             </div>
 
         </div>

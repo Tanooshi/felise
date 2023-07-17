@@ -1,23 +1,23 @@
 
 <template>
     <nav class="navbar">
-        <a class="brand-name" href="/">felise</a>
+        <a class="brand-name" href="/felise">felise</a>
         <div>
             <ul class="nav-menu" :class="showMenu ? 'active' : ''">
                 <li class="nav-link ">
-                    <a href="/#about-us">About Us</a>
+                    <a href="/felise/#about-us">About Us</a>
 
                 </li>
                 <li class="nav-link ">
-                    <a href="/#properties">Properties</a>
+                    <a href="/felise/#properties">Properties</a>
 
                 </li>
                 <li class="nav-link ">
-                    <a href="/#contact">Contact</a>
+                    <a href="/felise/#contact">Contact</a>
 
                 </li>
                 <li class="nav-link ">
-                    <a href="/#testimonials">Testimonials</a>
+                    <a href="/felise/#testimonials">Testimonials</a>
 
                 </li>
 
